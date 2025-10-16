@@ -36,6 +36,8 @@ class AutoRun:
     def do(self):
         self.boy.frame = (self.boy.frame + 1) % 8
         self.boy.x += self.boy.dir*5
+        if get_time() - self.boy.wait_start_time > 2.0:
+            self.boy.state_machine.handle_state_event(('TIME_OUT', None))
 
     def draw(self):
         if self.boy.face_dir == 1: # right
