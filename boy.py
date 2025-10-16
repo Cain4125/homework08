@@ -29,6 +29,7 @@ class AutoRun:
             self.boy.dir = self.boy.face_dir = 1
         elif self.boy.face_dir == -1:
             self.boy.dir = self.boy.face_dir = -1
+        self.boy.wait_start_time = get_time()
 
     def exit(self,e):
         pass
