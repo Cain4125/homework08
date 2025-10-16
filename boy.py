@@ -41,8 +41,10 @@ class AutoRun:
             self.boy.state_machine.handle_state_event(('TIME_OUT', None))
         if self.boy.x <=20:
             self.boy.dir = 1
+            self.boy.face_dir = 1
         elif self.boy.x >= 780:
             self.boy.dir = -1
+            self.boy.face_dir = -1
 
 
     def draw(self):
